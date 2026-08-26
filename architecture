@@ -1,0 +1,17 @@
+                  Internet
+                     │
+                     ▼
+                Route 53
+                     │
+                     ▼
+          Application Load Balancer
+                 /        \
+                /          \
+               ▼            ▼
+          EC2 Instance  EC2 Instance
+             AZ-1           AZ-2
+                \            /
+                 \          /
+                  ▼        ▼
+                    RDS
+                 Database
