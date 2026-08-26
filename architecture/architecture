@@ -1,1 +1,9 @@
-
+                Internet
+                   │
+              Route 53
+                   │
+             Load Balancer
+              /         \
+            EC2         EC2
+             \           /
+                RDS
