@@ -1,1 +1,27 @@
+AWS Services Used
 
+Amazon VPC — Provides isolated networking for the application.
+Amazon EC2 — Hosts the Apache web servers.
+Application Load Balancer — Distributes incoming traffic across EC2 instances.
+Auto Scaling Group — Automatically maintains the desired number of EC2 instances.
+Elastic Load Balancing Health Checks — Detects unhealthy instances.
+Security Groups — Controls inbound and outbound traffic.
+
+High Availability Features
+
+EC2 instances deployed across multiple Availability Zones.
+Application Load Balancer distributes traffic between instances.
+Auto Scaling Group maintains the desired number of healthy instances.
+Target group health checks monitor instance availability.
+Failed instances can be automatically replaced.
+
+Automation
+
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+
+This script automatically installs and configures Apache when new instances launch.
