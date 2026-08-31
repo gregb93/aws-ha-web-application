@@ -1,9 +1,13 @@
-                Internet
-                   │
-              Route 53
-                   │
-             Load Balancer
-              /         \
-            EC2         EC2
-             \           /
-                RDS
+Internet
+   │
+   ▼
+Application Load Balancer
+   │
+   ▼
+Target Group
+   │
+   ├── EC2 Instance (AZ 1)
+   │
+   └── EC2 Instance (AZ 2)
+          │
+     Auto Scaling Group
