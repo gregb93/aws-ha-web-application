@@ -1,1 +1,2 @@
 One of the main problems I was having with setting up my web application was not being able to have a "healthy" health status for my instances in my target group, what I have found out I didnt give my subnets and gateway internet access so therefore I was getting a 502 error code which means my ALB got my request but couldnt make a connection, that was solved I allowed my subnets and gateway have internet access.
+one of the commands that helped solved my apache server issue was using nslookup command.
