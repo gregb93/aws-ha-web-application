@@ -25,3 +25,5 @@ systemctl enable httpd
 echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 
 This script automatically installs and configures Apache when new instances launch.
+
+I used an Application Load Balancer to distribute traffic across multiple EC2 instances and an Auto Scaling Group to maintain application availability. EC2 instances are automatically configured using user-data, allowing replacement instances to deploy the web server without manual configuration.
